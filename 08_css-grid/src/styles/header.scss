@@ -38,6 +38,10 @@ header {
 		}
 }
 
+.header__nav-last {
+	display: none;
+}
+
 .header__nav-link {
 	color: inherit;
 	outline: 5px solid transparent;

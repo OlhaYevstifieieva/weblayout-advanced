@@ -79,34 +79,6 @@ input {
   line-height: 31px;
 }
 
-body {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "header" "main" "footer";
-  -ms-grid-rows: 80px 1fr 106px;
-      grid-template-rows: 80px 1fr 106px;
-  height: 100vh;
-  margin: 0;
-}
-
-#pageHeader {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-}
-
-#pageFooter {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: footer;
-}
-
-#main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: main;
-}
-
 .hero__grid {
   display: -ms-grid;
   display: grid;
@@ -121,35 +93,28 @@ body {
   display: grid;
   margin: 0;
   grid-gap: 30px;
-      grid-template-areas: "heading heading" "works works" "works2 works3";
-  -ms-grid-rows: 12px 1fr 1fr;
-      grid-template-rows: 12px 1fr 1fr;
+      grid-template-areas: "works works" "works2 works3";
+  -ms-grid-rows: 1fr .8fr;
+      grid-template-rows: 1fr .8fr;
   -ms-grid-columns: 0.5fr 0.5fr;
       grid-template-columns: 0.5fr 0.5fr;
 }
 
-#hero__grid-right--heading {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: heading;
-}
-
 #hero__grid-works {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: works;
 }
 
 #hero__grid-works2 {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: works2;
 }
 
 #hero__grid-works3 {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: works3;
 }
@@ -159,21 +124,10 @@ body {
   display: grid;
   margin: 0;
   grid-gap: 30px;
-      grid-template-areas: "left right";
   -ms-grid-columns: 0.5fr 0.5fr;
       grid-template-columns: 0.5fr 0.5fr;
-}
-
-#about__left {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: left;
-}
-
-#about__right {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: right;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
 }
 
 .project-grid {
@@ -181,57 +135,20 @@ body {
   display: grid;
   margin: 0;
   grid-gap: 30px;
-      grid-template-areas: "block1 block2 block3 block5 block5 block5 block5" "block4 block4 block4 block6 block6 block7 block7";
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: .5fr .5fr .5fr .4fr .4fr .4fr .4fr;
-      grid-template-columns: .5fr .5fr .5fr .4fr .4fr .4fr .4fr;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
 }
 
-#project-block1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: block1;
+.project-grid__block {
+  grid-column: span 2;
 }
 
-#project-block2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: block2;
+.block4, .block5 {
+  grid-column: span 6;
 }
 
-#project-block3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: block3;
-}
-
-#project-block4 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: block4;
-}
-
-#project-block5 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 4;
-  grid-area: block5;
-}
-
-#project-block6 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 2;
-  grid-area: block6;
-}
-
-#project-block7 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 2;
-  grid-area: block7;
+.block6, .block7 {
+  grid-column: span 3;
 }
 
 .contacts-grid {
@@ -240,8 +157,8 @@ body {
   margin: 0;
   grid-gap: 30px;
       grid-template-areas: "map form";
-  -ms-grid-columns: 1.45fr 0.7fr;
-      grid-template-columns: 1.45fr 0.7fr;
+  -ms-grid-columns: 1.45fr 1fr;
+      grid-template-columns: 1.45fr 1fr;
 }
 
 #map {
@@ -329,6 +246,10 @@ header {
 
 .header__nav-list li:not(:last-child) {
   margin-right: 79px;
+}
+
+.header__nav-last {
+  display: none;
 }
 
 .header__nav-link {

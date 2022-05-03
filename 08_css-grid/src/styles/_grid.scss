@@ -1,27 +1,6 @@
 @import '_variables.scss';
 @import '_mixin.scss';
 
-body {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: 80px 1fr 106px;
-  height: 100vh;
-  margin: 0;
-  }
-
-#pageHeader {
-  grid-area: header;
-}
-#pageFooter {
-  grid-area: footer;
-}
-#main {
-  grid-area: main;
-}
-
 .hero__grid {
 	@include grid;
 	grid-template-columns: 1fr 1fr;
@@ -31,15 +10,10 @@ body {
 .hero__grid-right {
 	@include grid;
 	grid-template-areas:
-    "heading heading"
     "works works"
     "works2 works3";
-  grid-template-rows: 12px 1fr 1fr;
+  grid-template-rows: 1fr .8fr;
 	grid-template-columns: 0.5fr 0.5fr;
-}
-
-#hero__grid-right--heading {
-	grid-area: heading;
 }
 
 #hero__grid-works {
@@ -56,61 +30,32 @@ body {
 
 .about-grid {
 	@include grid;
-	grid-template-areas:
-    "left right";
 	grid-template-columns: 0.5fr 0.5fr;
-}
-
-#about__left {
-	grid-area: left;
-}
-
-#about__right {
-	grid-area: right;
+	grid-template-rows: auto;
 }
 
 .project-grid {
 	@include grid;
-	grid-template-areas:
-    "block1 block2 block3 block5 block5 block5 block5"
-		"block4 block4 block4 block6 block6 block7 block7";
-		grid-template-rows: 1fr 1fr;
-		grid-template-columns: .5fr .5fr .5fr .4fr .4fr .4fr .4fr;
+	grid-template-columns: repeat(12, 1fr);
 }
 
-#project-block1 {
-	grid-area: block1;
+.project-grid__block {
+	grid-column: span 2;
 }
 
-#project-block2 {
-	grid-area: block2;
+.block4, .block5 {
+	grid-column: span 6;
 }
 
-#project-block3 {
-	grid-area: block3;
-}
-
-#project-block4 {
-	grid-area: block4;
-}
-
-#project-block5 {
-	grid-area: block5;
-}
-
-#project-block6 {
-	grid-area: block6;
-}
-
-#project-block7 {
-	grid-area: block7;
+.block6, .block7 {
+	grid-column: span 3;
 }
 
 .contacts-grid {
 	@include grid;
 	grid-template-areas:
     "map form";
-		grid-template-columns: 1.45fr 0.7fr;
+	grid-template-columns: 1.45fr 1fr;
 }
 
 #map {

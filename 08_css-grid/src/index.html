@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,13 +39,15 @@
 						<li class="header__nav-item">
 							<a href="#footer" class="header__nav-link js-scroll-link js-menu-link">Контакты</a>
 						</li>
+						<li class="header__nav-last">
+							<span class="contacts-modal__call">
+								<svg class="call">
+									<use xlink:href="img/sprite.svg#svg--call"></use>
+								</svg>&nbsp;<a href="tel:+749542423532" class="contacts-modal__tell">+7&nbsp;(495)&nbsp;42&nbsp;-&nbsp;423&nbsp;-&nbsp;532</a>
+							</span>
+						</li>
 					</ul>
-					<span class="header__nav-call">
-						<svg class="call">
-							<use xlink:href="img/sprite.svg#svg--call"></use>
-							<a href="tel:+749542423532" class="modal__tell">+7 (495) 42-423-532</a>
-						</svg>
-					</span>
+
 				</div>
 
 				<button class="btn-reset burger">
@@ -106,33 +108,35 @@
 							<h2 class="hero__grid-heading">Неоновый фотосет 2.0 7 июля 20:00</h2>
 							<button class="hero-btn">Узнать больше</button>
 						</div>
-
 					</div>
 
-					<div class="hero__grid-right">
-					<h2 class="hero__grid-right--heading" id="hero__grid-right--heading">Работы участников предыдущего мастер-класса</h2>
-					<div class="hero__grid-works" id="hero__grid-works">
-						<picture>
-							<source srcset="img/works2(2).jpg" media="(max-width: 550px)">
-							<source srcset="img/works2(1).jpg" media="(max-width: 1024px)">
-							<img class="hero__grid-image" src="img/works2.jpg" alt="пример работы участников предыдущего мастер-класса">
-						</picture>
+					<div>
+						<h2 class="hero__grid-right--heading">Работы участников предыдущего мастер-класса</h2>
+						<div class="hero__grid-right">
+							<div class="hero__grid-works" id="hero__grid-works">
+								<picture>
+									<source srcset="img/works2(2).jpg" media="(max-width: 550px)">
+									<source srcset="img/works2(1).jpg" media="(max-width: 1024px)">
+									<img class="hero__grid-image" src="img/works2.jpg" alt="пример работы участников предыдущего мастер-класса">
+								</picture>
+							</div>
+							<div class="hero__grid-works2" id="hero__grid-works2">
+								<picture>
+									<source srcset="img/works3(2).jpg" media="(max-width: 550px)">
+									<source srcset="img/works3(1).jpg" media="(max-width: 1024px)">
+									<img class="hero__grid-image" src="img/works3.jpg" alt="пример работы участников предыдущего мастер-класса">
+								</picture>
+							</div>
+							<div class="hero__grid-works3" id="hero__grid-works3">
+								<picture>
+									<source srcset="img/works4(2).jpg" media="(max-width: 550px)">
+									<source srcset="img/works4(1).jpg" media="(max-width: 1024px)">
+									<img class="hero__grid-image" src="img/works4.jpg" alt="пример работы участников предыдущего мастер-класса">
+								</picture>
+							</div>
+						</div>
 					</div>
-					<div class="hero__grid-works2" id="hero__grid-works2">
-						<picture>
-							<source srcset="img/works3(2).jpg" media="(max-width: 550px)">
-							<source srcset="img/works3(1).jpg" media="(max-width: 1024px)">
-							<img class="hero__grid-image" src="img/works3.jpg" alt="пример работы участников предыдущего мастер-класса">
-						</picture>
-					</div>
-					<div class="hero__grid-works3" id="hero__grid-works3">
-						<picture>
-							<source srcset="img/works4(2).jpg" media="(max-width: 550px)">
-							<source srcset="img/works4(1).jpg" media="(max-width: 1024px)">
-							<img class="hero__grid-image" src="img/works4.jpg" alt="пример работы участников предыдущего мастер-класса">
-						</picture>
-					</div>
-					</div>
+
 				</div>
 			</div>
 		</section>
@@ -141,10 +145,9 @@
 			<div class="container">
 				<h2 class="section-heading">О студии</h2>
 				<div class="about-grid">
-					<div class="about-grid__left" id="about__left">В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий  фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.</div>
-					<div class="about-grid__right" id="about__right">
-						<div class="about-grid__back"></div>
-						<h3>Подписаться на рассылку</h3>
+					<div class="about-grid__left">В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий  фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.</div>
+					<div class="about-grid__right">
+						<h3 class="about-grid__right-heading">Подписаться на рассылку</h3>
 						<form action="/" method="post" class="about-grid__form">
 							<label class="about-grid__label">
 								<input type="email" placeholder="E-mail">
@@ -161,7 +164,7 @@
 				<h2 class="section-heading">Наши проекты</h2>
 				<div class="project-grid">
 
-						<div class="project-grid__block" id="project-block1">
+						<div class="project-grid__block block1">
 							<picture>
 								<source srcset="img/mount320.jpg" media="(max-width: 550px)">
 								<source srcset="img/mount768.jpg" media="(max-width: 768px)">
@@ -174,7 +177,7 @@
 
 							</div>
 						</div>
-						<div class="project-grid__block" id="project-block2">
+						<div class="project-grid__block block2">
 							<picture>
 								<source srcset="img/man320.jpg" media="(max-width: 550px)">
 								<source srcset="img/man768.jpg" media="(max-width: 768px)">
@@ -186,7 +189,7 @@
 								<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">28 мая</span></div>
 							</div>
 						</div>
-						<div class="project-grid__block" id="project-block3">
+						<div class="project-grid__block block3">
 							<picture>
 								<source srcset="img/dec320.jpg" media="(max-width: 550px)">
 								<source srcset="img/dec768.jpg" media="(max-width: 768px)">
@@ -198,19 +201,19 @@
 								<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">14 мая</span></div>
 							</div>
 						</div>
-						<div class="project-grid__block auto-fit" id="project-block4">
+						<div class="project-grid__block block4">
 							<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">20 марта</span></div>
 							<h3 class="project-grid__h3">Забвение</h3>
 							<p class="project-grid__bottom">Играет важную роль в формировании глубокомысленных рассуждений</p>
 							<button class="project-grid__btn">О проекте</button>
 						</div>
-						<div class="project-grid__block" id="project-block5">
+						<div class="project-grid__block block5">
 							<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">9 апреля</span></div>
 							<h3 class="project-grid__h3">Cемантический разбор</h3>
 							<p class="project-grid__bottom">В рамках спецификации современных стандартов, интерактивные прототипы</p>
 							<button class="project-grid__btn">О проекте</button>
 						</div>
-						<div class="project-grid__block auto-fit" id="project-block6">
+						<div class="project-grid__block block6">
 							<picture>
 								<source srcset="img/fruct320.jpg" media="(max-width: 550px)">
 								<source srcset="img/fruct768.jpg" media="(max-width: 768px)">
@@ -222,7 +225,7 @@
 								<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">9 марта</span></div>
 							</div>
 						</div>
-						<div class="project-grid__block" id="project-block7">
+						<div class="project-grid__block block7">
 							<picture>
 								<source srcset="img/woman320.jpg" media="(max-width: 550px)">
 								<source srcset="img/woman768.jpg" media="(max-width: 768px)">
@@ -300,7 +303,7 @@
 				</svg>
 				<p class="footer__logo-desk">Фотостудия High pass® 2018-2020</p>
 			</div>
-			<div class="footer__text" aria-label="цитата">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра<br><span class="footer__span" aria-label="автор цитаты">© Имоджен Каннингем</span></div>
+			<div class="footer__text">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра<br><span class="footer__span">© Имоджен Каннингем</span></div>
 			<div class="footer-social__wrap">
 				<p class="footer__heading">Больше интересного:</p>
 				<div class="footer-social">

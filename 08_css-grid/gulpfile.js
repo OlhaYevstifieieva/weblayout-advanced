@@ -159,7 +159,7 @@ watch('src/resources/**', resources);
 exports.styles = styles;
 exports.htmlMinify = htmlMinify;
 exports.scripts = scripts;
-exports.default = series(clean, htmlMinify, fonts, scripts, script, styles, resources, imgToApp, images, svgSprites, watchFiles)
+exports.default = series(clean, htmlMinify, fonts, script, styles, resources, imgToApp, images, svgSprites, watchFiles)
 
 // const tinypng = () => {
 //     return src(['src/images/**.jpg', 'src/images/**.png', 'src/images/**.jpeg'])
@@ -236,4 +236,4 @@ const scriptBuild = () => {
 		.pipe(dest('build'))
 }
 
-exports.build = series(cleanBuild, htmlBuild, fonts, scriptsBuild, scriptBuild, stylesBuild, resources, imgToApp, images, svgSprites, watchFiles)
+exports.build = series(cleanBuild, htmlBuild, fonts, scriptBuild, stylesBuild, resources, imgToApp, images, svgSprites, watchFiles)

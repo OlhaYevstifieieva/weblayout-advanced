@@ -29,9 +29,10 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify-es": "^3.0.0",
-    "webpack": "^5.70.0"
+    "webpack": "^5.70.0",
+		"webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "webpack-stream": "^7.0.0"
+    "just-validate": "^3.5.2"
   }
 }
