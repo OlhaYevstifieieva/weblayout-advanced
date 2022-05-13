@@ -15,11 +15,11 @@
 	<script defer src="main.js"></script>
 </head>
 <body>
-	<header id="pageHeader">
+	<header>
 		<div class="container header">
-			<svg class="logo">
-				<use xlink:href="img/sprite.svg#svg--Logo"></use>
-			</svg>
+			<a href="#" class="logo" aria-label="изображение логотипа">
+				<img src="img/Logo.png">
+			</a>
 
 			<nav aria-label="панель-навигации" class="header__nav">
 				<div class="menu-wrap">
@@ -31,22 +31,22 @@
 							<a href="#projects" class="header__nav-link js-scroll-link js-menu-link">Наши проекты</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#services" class="header__nav-link js-scroll-link js-menu-link">Услуги</a>
+							<a href="#" class="header__nav-link js-scroll-link js-menu-link">Услуги</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#master" class="header__nav-link js-scroll-link js-menu-link">Мастер-классы</a>
+							<a href="hero" class="header__nav-link js-scroll-link js-menu-link">Мастер-классы</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#footer" class="header__nav-link js-scroll-link js-menu-link">Контакты</a>
-						</li>
-						<li class="header__nav-last">
-							<span class="contacts-modal__call">
-								<svg class="call">
-									<use xlink:href="img/sprite.svg#svg--call"></use>
-								</svg>&nbsp;<a href="tel:+749542423532" class="contacts-modal__tell">+7&nbsp;(495)&nbsp;42&nbsp;-&nbsp;423&nbsp;-&nbsp;532</a>
-							</span>
+							<a href="#contacts" class="header__nav-link js-scroll-link js-menu-link">Контакты</a>
 						</li>
 					</ul>
+					<div class="header__nav-last">
+						<span class="contact-call">
+							<svg class="call">
+								<use xlink:href="img/sprite.svg#svg--call"></use>
+							</svg>&nbsp;<a href="tel:+749542423532" class="contact-tell">+7&nbsp;(495)&nbsp;42&nbsp;-&nbsp;423&nbsp;-&nbsp;532</a>
+						</span>
+					</div>
 
 				</div>
 
@@ -73,21 +73,21 @@
 			 <div class="header-social">
 				<ul class="header-social__list">
 					<li class="header-social__item">
-						<a href="#" class="header-social__link">
+						<a href="#" class="header-social__link" aria-label="ссылка на контакт в инстгараме">
 							<svg class="social-icon">
 								<use xlink:href="img/sprite.svg#svg--inst"></use>
 							</svg>
 						</a>
 					</li>
 					<li class="header-social__item">
-						<a href="#" class="header-social__link">
+						<a href="#" class="header-social__link" aria-label="ссылка на контакт в фейсбуке">
 							<svg class="social-icon">
 								<use xlink:href="img/sprite.svg#svg--fb"></use>
 							</svg>
 						</a>
 					</li>
 					<li class="header-social__item">
-						<a href="#" class="header-social__link">
+						<a href="#" class="header-social__link" aria-label="ссылка на контакт в вк">
 							<svg class="social-icon">
 								<use xlink:href="img/sprite.svg#svg--vk"></use>
 							</svg>
@@ -97,8 +97,8 @@
 			</div>
 		</div>
 	</header>
-	<main id="main">
-		<section class="hero">
+	<main>
+		<section class="hero" id="hero">
 			<div class="container">
 				<div class="hero__grid">
 					<div class="hero__grid-left">
@@ -110,9 +110,9 @@
 						</div>
 					</div>
 
-					<div>
-						<h2 class="hero__grid-right--heading">Работы участников предыдущего мастер-класса</h2>
-						<div class="hero__grid-right">
+					<div class="hero__right">
+						<h2 class="hero__right-heading">Работы участников предыдущего мастер-класса</h2>
+						<div class="hero__right-grid">
 							<div class="hero__grid-works" id="hero__grid-works">
 								<picture>
 									<source srcset="img/works2(2).jpg" media="(max-width: 550px)">
@@ -141,7 +141,7 @@
 			</div>
 		</section>
 
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container">
 				<h2 class="section-heading">О студии</h2>
 				<div class="about-grid">
@@ -159,80 +159,80 @@
 			</div>
 		</section>
 
-		<section class="project">
+		<section class="project" id="projects">
 			<div class="container">
 				<h2 class="section-heading">Наши проекты</h2>
 				<div class="project-grid">
 
-						<div class="project-grid__block block1">
+						<div class="project-grid__block project-grid__card1">
 							<picture>
 								<source srcset="img/mount320.jpg" media="(max-width: 550px)">
 								<source srcset="img/mount768.jpg" media="(max-width: 768px)">
 								<source srcset="img/mount1024.jpg" media="(max-width: 1260px)">
 								<img class="project-grid__picture" src="img/mount1920.jpg" alt="фотопример одного из проектов">
 							</picture>
-							<div class="poject-grid__desc">
+							<div class="project-grid__desc">
 								<p class="project-grid__desc-text">Синтетически, смешаны с не уникальными данными до степени...</p>
 								<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">16 июня</span></div>
 
 							</div>
 						</div>
-						<div class="project-grid__block block2">
+						<div class="project-grid__block project-grid__card2">
 							<picture>
 								<source srcset="img/man320.jpg" media="(max-width: 550px)">
 								<source srcset="img/man768.jpg" media="(max-width: 768px)">
 								<source srcset="img/man1024.jpg" media="(max-width: 1260px)">
 								<img class="project-grid__picture" src="img/man1920.jpg" alt="фотопример одного из проектов">
 							</picture>
-							<div class="poject-grid__desc-text">
+							<div class="project-grid__desc">
 								<p class="project-grid__desc-text">В своём стремлении улучшить опыт мы упускаем, что явные...</p>
 								<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">28 мая</span></div>
 							</div>
 						</div>
-						<div class="project-grid__block block3">
+						<div class="project-grid__block project-grid__card3">
 							<picture>
-								<source srcset="img/dec320.jpg" media="(max-width: 550px)">
-								<source srcset="img/dec768.jpg" media="(max-width: 768px)">
+								<!-- <source srcset="img/dec320.jpg" media="(max-width: 550px)"> -->
+								<source srcset="img/dec768.jpg" media="(max-width: 870px)">
 								<source srcset="img/dec1024.jpg" media="(max-width: 1260px)">
 								<img class="project-grid__picture" src="img/dec1920.jpg" alt="фотопример одного из проектов">
 							</picture>
-							<div class="poject-grid__desc">
-								<p class="project-grid__desc-text">Равным образом, высокое качество позиционных...</p>
+							<div class="project-grid__desc">
+								<p class="project-grid__desc-text">Равным образом, высокое качество позиционных высокотехнологичная концепция общественного уклада</p>
 								<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">14 мая</span></div>
 							</div>
 						</div>
-						<div class="project-grid__block block4">
-							<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">20 марта</span></div>
-							<h3 class="project-grid__h3">Забвение</h3>
-							<p class="project-grid__bottom">Играет важную роль в формировании глубокомысленных рассуждений</p>
-							<button class="project-grid__btn">О проекте</button>
-						</div>
-						<div class="project-grid__block block5">
+						<div class="project-grid__block project-grid__card5">
 							<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">9 апреля</span></div>
 							<h3 class="project-grid__h3">Cемантический разбор</h3>
 							<p class="project-grid__bottom">В рамках спецификации современных стандартов, интерактивные прототипы</p>
 							<button class="project-grid__btn">О проекте</button>
 						</div>
-						<div class="project-grid__block block6">
+						<div class="project-grid__block project-grid__card4">
+							<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">20 марта</span></div>
+							<h3 class="project-grid__h3">Забвение</h3>
+							<p class="project-grid__bottom">Играет важную роль в формировании глубокомысленных рассуждений</p>
+							<button class="project-grid__btn">О проекте</button>
+						</div>
+						<div class="project-grid__block project-grid__card6">
 							<picture>
 								<source srcset="img/fruct320.jpg" media="(max-width: 550px)">
 								<source srcset="img/fruct768.jpg" media="(max-width: 768px)">
 								<source srcset="img/fruct1024.jpg" media="(max-width: 1260px)">
 								<img class="project-grid__picture" src="img/fruct1920.jpg" alt="фотопример одного из проектов">
 							</picture>
-							<div class="poject-grid__desc">
+							<div class="project-grid__desc">
 								<p class="project-grid__desc-text">Как принято считать, многие известные личности и по сей день остаются уделом либералов...</p>
 								<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">9 марта</span></div>
 							</div>
 						</div>
-						<div class="project-grid__block block7">
+						<div class="project-grid__block project-grid__card7">
 							<picture>
 								<source srcset="img/woman320.jpg" media="(max-width: 550px)">
 								<source srcset="img/woman768.jpg" media="(max-width: 768px)">
 								<source srcset="img/woman1024.jpg" media="(max-width: 1260px)">
 								<img class="project-grid__picture" src="img/woman1920.jpg" alt="фотопример одного из проектов">
 							</picture>
-							<div class="poject-grid__desc">
+							<div class="project-grid__desc">
 								<p class="project-grid__desc-text">С учётом сложившейся международной обстановки, новая модель организационной...</p>
 								<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">1 марта</span></div>
 							</div>
@@ -242,11 +242,12 @@
 			</div>
 		</section>
 
-		<section class="contacts">
+		<section class="contacts" id="contacts">
 				<h2 class="section-heading">Контакты</h2>
 				<div class="contacts-grid">
 					<h3 class="visually-hidden">Яндекс-карта местонахождения фото-студии</h3>
-      		<div id="map" class="map__wrap">
+
+      		<div id="map" class="map">
 						<div class="contacts-modal">
 							<button class="contacts-modal__close" type="button">
 								<svg class="close-btn-svg">
@@ -255,17 +256,17 @@
 							</button>
 							<p class="contacts-modal__heading">Студия “High pass”</p>
 							<p class="contacts-modal__adres">107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр «Даев Плаза», этаж&nbsp;8, офис&nbsp;№&nbsp;82
-								<span class="contacts-modal__call">
+								<span class="contact-call">
 									<svg class="call">
 										<use xlink:href="img/sprite.svg#svg--call"></use>
-									</svg>&nbsp;<a href="tel:+749542423532" class="contacts-modal__tell">+7&nbsp;(495)&nbsp;42&nbsp;-&nbsp;423&nbsp;-&nbsp;532</a>
+									</svg>&nbsp;<a href="tel:+749542423532" class="contact-tell">+7&nbsp;(495)&nbsp;42&nbsp;-&nbsp;423&nbsp;-&nbsp;532</a>
 							</span>
 						</p>
 
 						</div>
 					</div>
 
-					<div id="form__wrap">
+					<div>
 						<h3 class="contacts-grid__headingh3">Оставить заявку</h3>
 						<form action="/" method="post" class="contacts-grid__form">
 							<p class="contacts-grid__desk">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия</p>
@@ -295,12 +296,12 @@
 		</section>
 	</main>
 
-	<footer class="footer" id="pageFooter">
+	<footer class="footer">
 		<div class="footer__container">
 			<div class="footer__logo">
-				<svg class="logo">
-					<use xlink:href="img/sprite.svg#svg--Logo"></use>
-				</svg>
+				<a href="#" class="logo" aria-label="изображение логотипа">
+					<img src="img/Logo.png">
+				</a>
 				<p class="footer__logo-desk">Фотостудия High pass® 2018-2020</p>
 			</div>
 			<div class="footer__text">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра<br><span class="footer__span">© Имоджен Каннингем</span></div>
@@ -309,21 +310,21 @@
 				<div class="footer-social">
 					<ul class="footer-social__list">
 						<li class="footer-social__item">
-							<a href="#" class="footer-social__link">
+							<a href="#" class="footer-social__link" aria-label="ссылка на контакт в инстгараме">
 								<svg class="social-icon">
 									<use xlink:href="img/sprite.svg#svg--inst"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="footer-social__item">
-							<a href="#" class="footer-social__link">
+							<a href="#" class="footer-social__link" aria-label="ссылка на контакт в фейсбуке">
 								<svg class="social-icon">
 									<use xlink:href="img/sprite.svg#svg--fb"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="footer-social__item">
-							<a href="#" class="footer-social__link">
+							<a href="#" class="footer-social__link" aria-label="ссылка на контакт в вк">
 								<svg class="social-icon">
 									<use xlink:href="img/sprite.svg#svg--vk"></use>
 								</svg>

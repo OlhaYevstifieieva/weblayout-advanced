@@ -42,19 +42,13 @@ const styles = () => {
     .pipe(autoprefixer({
         cascade: false,
     }))
-    .pipe(cleanCSS({
-        level: 2
-    }))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('dist'))
     .pipe(browserSync.stream())
 }
 
-const htmlMinify = () => {
+const html = () => {
     return src('src/**/*.html')
-    .pipe(htmlMin({
-        collapseWhitespace: true,
-    }))
     .pipe(dest('dist'))
     .pipe(browserSync.stream())
 }
@@ -145,7 +139,7 @@ const watchFiles = () => {
 }
 
 
-watch('src/**/*.html', htmlMinify)
+watch('src/**/*.html', html)
 watch('src/styles/**/*.css', styles)
 watch('src/images/**.jpg', imgToApp)
 watch('src/images/**.png', imgToApp)
@@ -157,9 +151,8 @@ watch('src/js/**/*.js', script)
 watch('src/resources/**', resources);
 
 exports.styles = styles;
-exports.htmlMinify = htmlMinify;
 exports.scripts = scripts;
-exports.default = series(clean, htmlMinify, fonts, script, styles, resources, imgToApp, images, svgSprites, watchFiles)
+exports.default = series(clean, html, fonts, script, styles, resources, imgToApp, svgSprites, watchFiles)
 
 // const tinypng = () => {
 //     return src(['src/images/**.jpg', 'src/images/**.png', 'src/images/**.jpeg'])
@@ -236,4 +229,4 @@ const scriptBuild = () => {
 		.pipe(dest('build'))
 }
 
-exports.build = series(cleanBuild, htmlBuild, fonts, scriptBuild, stylesBuild, resources, imgToApp, images, svgSprites, watchFiles)
+exports.build = series(cleanBuild, htmlBuild, fonts, scriptBuild, stylesBuild, resources, images, svgSprites, watchFiles)

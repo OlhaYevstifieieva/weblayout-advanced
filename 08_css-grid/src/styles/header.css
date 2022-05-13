@@ -10,7 +10,7 @@ html {
           box-sizing: inherit;
 }
 
-* button {
+*button {
   background: none;
   border: none;
   outline: none;
@@ -20,19 +20,19 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  background-color: #E5E5E5;
+  background-color: #FFFFFF;
   font-family: 'TTFirsNeu', 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   font-style: normal;
-  background-color: #E5E5E5;
   color: #FFFFFF;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  outline: none;
 }
 
 ul {
@@ -44,6 +44,7 @@ ul {
 h1, h2, h3, h4, p, button {
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 img, svg {
@@ -52,6 +53,7 @@ img, svg {
 
 input {
   outline: none;
+  border-color: transparent;
 }
 
 .container {
@@ -88,7 +90,7 @@ input {
       grid-template-columns: 1fr 1fr;
 }
 
-.hero__grid-right {
+.hero__right-grid {
   display: -ms-grid;
   display: grid;
   margin: 0;
@@ -143,34 +145,12 @@ input {
   grid-column: span 2;
 }
 
-.block4, .block5 {
+.project-grid__card4, .project-grid__card5 {
   grid-column: span 6;
 }
 
-.block6, .block7 {
+.project-grid__card6, .project-grid__card7 {
   grid-column: span 3;
-}
-
-.contacts-grid {
-  display: -ms-grid;
-  display: grid;
-  margin: 0;
-  grid-gap: 30px;
-      grid-template-areas: "map form";
-  -ms-grid-columns: 1.45fr 1fr;
-      grid-template-columns: 1.45fr 1fr;
-}
-
-#map {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: map;
-}
-
-#form__wrap {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: form;
 }
 
 @font-face {
@@ -289,13 +269,30 @@ header {
 }
 
 .logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 190px;
   height: 30px;
 }
 
+.logo:focus {
+  outline: 1px solid #CE4307;
+  outline-offset: 3px;
+}
+
 .header-social__link {
+  outline: none;
+  border: none;
+}
+
+.header-social__link svg {
+  display: block;
   width: 30px;
   height: 30px;
+  fill: #CACACA;
 }
 
 .social-icon {
@@ -305,7 +302,15 @@ header {
   transition: fill 350ms ease-in-out;
 }
 
-.header-social__link:hover {
+.header-social__link:focus svg {
+  fill: #BC572B;
+}
+
+.header-social__link:active svg {
+  fill: #CE4307;
+}
+
+.header-social__link:hover svg {
   fill: #FF6E30;
 }
 

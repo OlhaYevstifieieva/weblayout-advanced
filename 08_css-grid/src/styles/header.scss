@@ -71,17 +71,30 @@ header {
 			&:not(:last-child) {
 				margin-right: 20px;
 			}
-}
+	}
 }
 
 .logo {
+	display: inline-flex;
+	flex-shrink: 0;
 	width: 190px;
 	height: 30px;
 }
 
+.logo:focus {
+	outline: 1px solid $btnColorActive;
+	outline-offset: 3px;
+}
+
 .header-social__link {
-	width: 30px;
-	height: 30px;
+	outline: none;
+	border: none;
+	svg {
+		display: block;
+		width: 30px;
+		height: 30px;
+		fill: $placeholder;
+	}
 }
 
 .social-icon {
@@ -90,8 +103,16 @@ header {
 	transition: fill 350ms ease-in-out;
 }
 
-.header-social__link:hover {
-  fill: $btnColor;
+.header-social__link:focus svg {
+	fill: $btnColorHover;
+}
+
+.header-social__link:active svg {
+	fill: $btnColorActive;
+}
+
+.header-social__link:hover svg {
+	fill: $btnColor;
 }
 
 .header__nav-call {

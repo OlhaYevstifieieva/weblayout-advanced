@@ -10,7 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-* button {
+*button {
   background: none;
   border: none;
   outline: none;
@@ -20,19 +20,19 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  background-color: $lightBack;
+  background-color: $wight;
   font-family: 'TTFirsNeu', 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
 	font-style: normal;
-  background-color: $lightBack;
 	color: $wight;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+	outline: none;
 }
 
 ul {
@@ -44,6 +44,7 @@ ul {
 h1, h2, h3,h4, p, button {
   margin: 0;
   padding: 0;
+	outline: none;
 }
 
 img, svg {
@@ -52,6 +53,7 @@ img, svg {
 
 input {
 	outline: none;
+	border-color: transparent;
 }
 
 .container {
@@ -72,7 +74,7 @@ input {
 }
 
 %btn {
-	padding: 15px 22px;
+	padding: 16px 22px;
 	font-family: 'Roboto';
 	font-weight: 700;
 	font-size: 16px;
@@ -92,6 +94,7 @@ input {
 %btn:focus {
 	outline: 3px solid $btnColorActive;
 	outline-offset: -3px;
+	border: none;
 }
 
 %btn:active {
