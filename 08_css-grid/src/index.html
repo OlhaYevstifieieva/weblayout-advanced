@@ -10,7 +10,7 @@
   <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" crossorigin>
 	<link rel="preload" href="fonts/TTFirsNeue-Bolt.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/TTFirsNeue-Regular.woff2" as="font" crossorigin>
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/styles.min.css">
 	<script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script defer src="main.js"></script>
 </head>
@@ -103,6 +103,7 @@
 				<div class="hero__grid">
 					<div class="hero__grid-left">
 						<div>
+							<span class="after">#мастеркласс</span>
 							<h1 class="visually-hidden">Фотостудия High pass</h1>
 							<p class="hero__grid-text">Мастер-класс от Игоря Робова</p>
 							<h2 class="hero__grid-heading">Неоновый фотосет 2.0 7 июля 20:00</h2>
@@ -113,21 +114,21 @@
 					<div class="hero__right">
 						<h2 class="hero__right-heading">Работы участников предыдущего мастер-класса</h2>
 						<div class="hero__right-grid">
-							<div class="hero__grid-works" id="hero__grid-works">
+							<div class="hero__grid-works">
 								<picture>
 									<source srcset="img/works2(2).jpg" media="(max-width: 550px)">
 									<source srcset="img/works2(1).jpg" media="(max-width: 1024px)">
 									<img class="hero__grid-image" src="img/works2.jpg" alt="пример работы участников предыдущего мастер-класса">
 								</picture>
 							</div>
-							<div class="hero__grid-works2" id="hero__grid-works2">
+							<div class="hero__grid-works2">
 								<picture>
 									<source srcset="img/works3(2).jpg" media="(max-width: 550px)">
 									<source srcset="img/works3(1).jpg" media="(max-width: 1024px)">
 									<img class="hero__grid-image" src="img/works3.jpg" alt="пример работы участников предыдущего мастер-класса">
 								</picture>
 							</div>
-							<div class="hero__grid-works3" id="hero__grid-works3">
+							<div class="hero__grid-works3">
 								<picture>
 									<source srcset="img/works4(2).jpg" media="(max-width: 550px)">
 									<source srcset="img/works4(1).jpg" media="(max-width: 1024px)">
@@ -165,6 +166,7 @@
 				<div class="project-grid">
 
 						<div class="project-grid__block project-grid__card1">
+							<span class="after">#пейзаж</span>
 							<picture>
 								<source srcset="img/mount320.jpg" media="(max-width: 550px)">
 								<source srcset="img/mount768.jpg" media="(max-width: 768px)">
@@ -178,6 +180,7 @@
 							</div>
 						</div>
 						<div class="project-grid__block project-grid__card2">
+							<span class="after">#портрет</span>
 							<picture>
 								<source srcset="img/man320.jpg" media="(max-width: 550px)">
 								<source srcset="img/man768.jpg" media="(max-width: 768px)">
@@ -190,6 +193,7 @@
 							</div>
 						</div>
 						<div class="project-grid__block project-grid__card3">
+							<span class="after">#предмет</span>
 							<picture>
 								<!-- <source srcset="img/dec320.jpg" media="(max-width: 550px)"> -->
 								<source srcset="img/dec768.jpg" media="(max-width: 870px)">
@@ -202,18 +206,21 @@
 							</div>
 						</div>
 						<div class="project-grid__block project-grid__card5">
+							<span class="after">#fuji</span>
 							<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">9 апреля</span></div>
 							<h3 class="project-grid__h3">Cемантический разбор</h3>
 							<p class="project-grid__bottom">В рамках спецификации современных стандартов, интерактивные прототипы</p>
 							<button class="project-grid__btn">О проекте</button>
 						</div>
 						<div class="project-grid__block project-grid__card4">
+							<span class="after">#проектзабвение</span>
 							<div class="project-grid__desc-wrap"><span class="project-grid__desc-date">20 марта</span></div>
 							<h3 class="project-grid__h3">Забвение</h3>
 							<p class="project-grid__bottom">Играет важную роль в формировании глубокомысленных рассуждений</p>
 							<button class="project-grid__btn">О проекте</button>
 						</div>
 						<div class="project-grid__block project-grid__card6">
+							<span class="after">#ретушь</span>
 							<picture>
 								<source srcset="img/fruct320.jpg" media="(max-width: 550px)">
 								<source srcset="img/fruct768.jpg" media="(max-width: 768px)">
@@ -226,6 +233,7 @@
 							</div>
 						</div>
 						<div class="project-grid__block project-grid__card7">
+							<span class="after">#портрет</span>
 							<picture>
 								<source srcset="img/woman320.jpg" media="(max-width: 550px)">
 								<source srcset="img/woman768.jpg" media="(max-width: 768px)">

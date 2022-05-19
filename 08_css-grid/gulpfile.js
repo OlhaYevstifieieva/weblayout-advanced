@@ -1,6 +1,8 @@
 const {src, dest, series, watch} = require('gulp')
 const concat = require('gulp-concat')
 const htmlMin = require('gulp-htmlmin')
+const rename = require('gulp-rename')
+const sass = require('gulp-sass')(require('sass'))
 const autoprefixer = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const svgSprite = require('gulp-svg-sprite')
@@ -13,8 +15,8 @@ const notify = require('gulp-notify')
 const sourcemaps = require('gulp-sourcemaps')
 const webpack = require('webpack')
 const webpackStream = require('webpack-stream')
-const del = require('del');
-const tiny = require('gulp-tinypng-compress');
+const del = require('del')
+const tiny = require('gulp-tinypng-compress')
 const browserSync = require('browser-sync').create()
 
 const clean = () => {
@@ -36,16 +38,36 @@ const fonts = () => {
 }
 
 const styles = () => {
-    return src('src/styles/**/*.css')
-    .pipe(sourcemaps.init())
-    .pipe(concat('main.css'))
-    .pipe(autoprefixer({
-        cascade: false,
-    }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream())
+	return src('./src/styles/styles.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass({
+			outputStyle: 'expanded'
+		}).on('error', notify.onError()))
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(autoprefixer({
+			cascade: false,
+		}))
+		.pipe(cleanCSS({
+			level: 2
+		}))
+		.pipe(sourcemaps.write('.'))
+		.pipe(dest('./dist/css/'))
+		.pipe(browserSync.stream());
 }
+
+// const styles = () => {
+//     return src('src/styles/**/*.css')
+//     .pipe(sourcemaps.init())
+//     .pipe(concat('main.css'))
+//     .pipe(autoprefixer({
+//         cascade: false,
+//     }))
+//     .pipe(sourcemaps.write('.'))
+//     .pipe(dest('dist'))
+//     .pipe(browserSync.stream())
+// }
 
 const html = () => {
     return src('src/**/*.html')
@@ -140,7 +162,7 @@ const watchFiles = () => {
 
 
 watch('src/**/*.html', html)
-watch('src/styles/**/*.css', styles)
+watch('src/styles/**/*.scss', styles)
 watch('src/images/**.jpg', imgToApp)
 watch('src/images/**.png', imgToApp)
 watch('src/images/**.jpeg', imgToApp)

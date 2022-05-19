@@ -8,23 +8,12 @@
 
 .hero__right-grid {
 	@include grid;
-	grid-template-areas:
-    "works works"
-    "works2 works3";
-  grid-template-rows: 1fr .8fr;
+  grid-template-rows: 1fr 257px;
 	grid-template-columns: 0.5fr 0.5fr;
 }
 
-#hero__grid-works {
-	grid-area: works;
-}
-
-#hero__grid-works2 {
-	grid-area: works2;
-}
-
-#hero__grid-works3 {
-	grid-area: works3;
+.hero__grid-works {
+	grid-column: span 2;
 }
 
 .about-grid {
