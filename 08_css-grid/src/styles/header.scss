@@ -66,12 +66,9 @@ header {
 }
 
 .header-social__list {
-	display: flex;
-	li {
-			&:not(:last-child) {
-				margin-right: 20px;
-			}
-	}
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
 }
 
 .logo {

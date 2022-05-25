@@ -424,9 +424,8 @@ header {
 			width: 166px;
 			height: 27px;
 		}
-		&-social__wrap {
+		&__wrap {
 			margin-top: 0;
-			margin-right: -9px;
 			&__list {
 				margin-top: 13px;
 			}
@@ -789,9 +788,6 @@ header {
 			}
 			&__block {
 				grid-column: span 12;
-				img {
-					max-height: 186px;
-				}
 				.after {
 					height: 22px;
 					width: 78px;
@@ -979,10 +975,10 @@ header {
 			align-items: center;
 			padding-bottom: 14px;
 			margin-top: -2px;
-			&__wrap {
-				margin-top: 15px;
-				margin-bottom: 14px;
-			}
+		}
+		&__wrap {
+			margin-top: 15px;
+			margin-bottom: 14px;
 		}
 	}
 

@@ -243,13 +243,11 @@ header {
 }
 
 .header-social__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header-social__list li:not(:last-child) {
-  margin-right: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
 .logo {

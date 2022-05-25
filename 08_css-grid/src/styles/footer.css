@@ -209,7 +209,7 @@ input {
   color: #4A4A4A;
 }
 
-.footer-social__wrap {
+.footer__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

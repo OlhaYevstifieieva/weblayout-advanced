@@ -350,11 +350,10 @@ input {
   fill: #CE4307;
 }
 
-#map {
+.map {
   position: relative;
   width: 100%;
   max-width: 850px;
-  margin-right: 30px;
 }
 
 .contacts-modal {
